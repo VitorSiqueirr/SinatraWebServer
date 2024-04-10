@@ -1,0 +1,51 @@
+body {
+    background-color: #3B3A39;
+    color: #EDEBE9;
+    font-size:1.2rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.title{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin: 1rem;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    margin: 0 auto;
+}
+
+.sub-title {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.social-media{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: #EDEBE9;
+    font-size: 1.35rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.social-media a:hover {
+    transform: scale(1.5) translateY(-0.625rem);
+    padding:0.2rem
+}
+
+

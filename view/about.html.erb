@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - <%= @name %></title>
+    <link rel="icon" href="/favicon.svg" type="image/png">
+
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <script src="https://kit.fontawesome.com/9b6abddc27.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Convergence&family=Montserrat:ital,wght@0,600;0,700;1,400&family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 class="title">
+        This page is about me <br> <%= @name %>
+    </h1>
+    
+    <div class="description">
+        <p> My name is <%= @name %>. I am currently pursuing my degree in Computer Science at <b>Unicentro</b>, a university located in <b>Guarapuava, Paraná</b>.<br>
+        I am in my final semester and anticipate completing my studies in March.</p>
+
+        <p> In addition to my academic pursuits, I am working as a <b>Trainee Developer</b> at <b>CodeMiner42</b>.<br>
+        This role is providing me with valuable insights into the industry and helping me apply the theoretical knowledge I've gained during my studies.</p>
+    
+        <p> My leisure activities encompass a variety of interests.<br> 
+        I am particularly fond of video gaming, with titles such as Quantum Break, Hollow Knight, Fortnite and Forza are among my favorites.<br>
+        Additionally, I enjoy consuming digital content, which includes watching series and YouTube videos, as well as immersing myself in the literary world through novels.<br>
+        And recently, I have also embarked on a fitness journey and have incorporated regular gym sessions into my routine.</p>
+    </div>
+    <h2 class="sub-title">
+        Skills:
+    </h2>
+
+    <div class="skills-container">
+        <% @skills.each do |focus, languages| %>
+            <ul class="skills">
+                <b><%= focus %></b>
+                <ul>
+                    <% languages.each do |language| %>
+                    <li><%= language %></li>
+                    <% end %>
+                </ul>
+            </ul>
+        <% end %>
+    </div>
+
+    <h2 class="sub-title">
+        his is some os my social media accounts:
+    </h2>
+
+    <div class="social-media">
+        <% @social_media.each do |name, url| %>
+            <a href="<%= url %>">
+            <i class="fa-brands fa-<%= name.downcase %>"></i>
+            </a>
+        <% end %>
+    </div>
+
+</body>
+</html>
